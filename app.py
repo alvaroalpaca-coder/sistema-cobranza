@@ -2,14 +2,16 @@ import streamlit as st
 import pandas as pd
 from twilio.rest import Client
 import time
+import os
 
 # Configuración de la página
 st.set_page_config(page_title="Sistema de Cobranza WhatsApp", layout="centered")
 st.title("📲 Envío de Mensajes Masivos")
 
 # Credenciales (Mantén las tuyas aquí)
-ACCOUNT_SID = 'AC5bcd7ef6e58f8d907642344357fce43c' 
-AUTH_TOKEN = 'd139a781f95e800501b5a8a08f9a5460'
+ACCOUNT_SID = st.secrets["TWILIO_ACCOUNT_SID"]
+AUTH_TOKEN = st.secrets["TWILIO_AUTH_TOKEN"]
+
 client = Client(ACCOUNT_SID, AUTH_TOKEN)
 
 # Interfaz de usuario
