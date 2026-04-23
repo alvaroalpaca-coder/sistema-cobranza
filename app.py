@@ -6,7 +6,7 @@ import os
 
 # Configuración de la página
 st.set_page_config(page_title="Sistema de Cobranza WhatsApp", layout="centered")
-st.title("📲 Envío de Mensajes Masivos")
+st.title("📲 Sistema de Cobranza - Envio de Msj por WhatsApp")
 
 # Credenciales (Mantén las tuyas aquí)
 ACCOUNT_SID = st.secrets["TWILIO_ACCOUNT_SID"]
